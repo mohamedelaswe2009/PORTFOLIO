@@ -40,9 +40,9 @@ function closeSidebarMobile() {
 
 // Logout Function
 function logout() {
-    const confirmed = confirm('هل تريد تسجيل الخروج؟');
+    const confirmed = confirm('Do you want to logout?');
     if (confirmed) {
-        alert('✅ تم تسجيل الخروج بنجاح!');
+        alert('✅ You have been logged out successfully!');
         window.location.href = 'index.html';
     }
 }
@@ -51,7 +51,7 @@ function logout() {
 const notificationBtn = document.querySelector('.notification-btn');
 if (notificationBtn) {
     notificationBtn.addEventListener('click', () => {
-        alert('لديك 2 إشعارات جديدة:\n\n1. موعد غداً مع د. محمود علي\n2. رسالة جديدة من د. فاطمة أحمد');
+        alert('You have 2 new notifications:\n\n1. Appointment tomorrow with Dr. Mahmoud Ali\n2. New message from Dr. Fatima Ahmed');
     });
 }
 
@@ -61,17 +61,17 @@ const cancelButtons = document.querySelectorAll('.appointment-actions .btn-dange
 
 rescheduleButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        if (e.target.textContent.includes('إعادة')) {
-            alert('🔄 جاري إعادة جدولة الموعد...');
+        if (e.target.textContent.includes('Reschedule')) {
+            alert('🔄 Rescheduling appointment...');
         }
     });
 });
 
 cancelButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        const confirmed = confirm('هل تريد إلغاء هذا الموعد؟');
+        const confirmed = confirm('Do you want to cancel this appointment?');
         if (confirmed) {
-            alert('❌ تم إلغاء الموعد بنجاح');
+            alert('❌ Appointment canceled successfully');
         }
     });
 });
@@ -84,7 +84,7 @@ filterButtons.forEach(btn => {
         btn.classList.add('active');
         
         const filter = btn.textContent.trim();
-        console.log('تم تطبيق الفلتر:', filter);
+        console.log('Filter applied:', filter);
         // Here you would filter the appointments
     });
 });
@@ -94,7 +94,7 @@ const doctorContactButtons = document.querySelectorAll('.doctor-card .btn-primar
 doctorContactButtons.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         const doctorName = btn.parentElement.querySelector('h3').textContent;
-        alert(`📞 جاري الاتصال بـ ${doctorName}...\n\nسيتم تحويلك إلى صفحة المحادثة`);
+        alert(`📞 Connecting to ${doctorName}...\n\nYou will be redirected to the chat page.`);
     });
 });
 
@@ -103,10 +103,10 @@ const recordButtons = document.querySelectorAll('.record-item .btn-secondary');
 recordButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const recordTitle = btn.parentElement.querySelector('h3').textContent;
-        if (btn.textContent.includes('تحميل')) {
-            alert(`⬇️ جاري تحميل: ${recordTitle}`);
+        if (btn.textContent.includes('Download')) {
+            alert(`⬇️ Downloading: ${recordTitle}`);
         } else {
-            alert(`📄 جاري عرض: ${recordTitle}`);
+            alert(`📄 Viewing: ${recordTitle}`);
         }
     });
 });
@@ -123,7 +123,7 @@ if (messageSendBtn) {
             newMessage.className = 'chat-message from-patient';
             newMessage.innerHTML = `
                 <p>${messageInput.value}</p>
-                <span class="time">الآن</span>
+                <span class="time">Now</span>
             `;
             chatContainer.appendChild(newMessage);
             chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -142,7 +142,7 @@ if (messageSendBtn) {
 const settingsForm = document.querySelector('.settings-container .btn-primary');
 if (settingsForm) {
     settingsForm.addEventListener('click', () => {
-        alert('✅ تم حفظ التغييرات بنجاح!');
+        alert('✅ Settings saved successfully!');
     });
 }
 
@@ -151,7 +151,7 @@ const appointmentCards = document.querySelectorAll('.appointment-card:not(.featu
 appointmentCards.forEach(card => {
     card.addEventListener('click', () => {
         const doctorName = card.querySelector('h3').textContent;
-        alert(`📋 تفاصيل الموعد:\n\n${doctorName}\n\nللمزيد من التفاصيل، اتصل بالدكتور`);
+        alert(`📋 Appointment details:\n\n${doctorName}\n\nFor more details, contact the doctor.`);
     });
 });
 
@@ -164,21 +164,21 @@ if (featuredAppointment) {
 
     if (detailsBtn) {
         detailsBtn.addEventListener('click', () => {
-            alert('📋 تفاصيل الموعد:\n\nالدكتور: د. محمود علي\nالتخصص: أمراض القلب\nالتاريخ: 25 مايو 2026\nالوقت: 03:00 PM\nالموقع: منزل المريض');
+            alert('📋 Appointment details:\n\nDoctor: Dr. Mahmoud Ali\nSpecialty: Cardiology\nDate: May 25, 2026\nTime: 03:00 PM\nLocation: Patient home');
         });
     }
 
     if (rescheduleBtn) {
         rescheduleBtn.addEventListener('click', () => {
-            alert('🔄 جاري فتح نموذج إعادة الجدولة...');
+            alert('🔄 Opening reschedule form...');
         });
     }
 
     if (cancelBtn) {
         cancelBtn.addEventListener('click', () => {
-            const confirmed = confirm('هل تريد إلغاء هذا الموعد؟');
+            const confirmed = confirm('Do you want to cancel this appointment?');
             if (confirmed) {
-                alert('❌ تم إلغاء الموعد بنجاح');
+                alert('❌ Appointment canceled successfully');
             }
         });
     }
@@ -189,16 +189,16 @@ const quickActionButtons = document.querySelectorAll('.quick-actions .action-btn
 quickActionButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const action = btn.textContent.trim();
-        console.log('تم الضغط على:', action);
+        console.log('Button clicked:', action);
         
-        if (action.includes('حجز')) {
+        if (action.includes('Book')) {
             window.location.href = 'booking.html';
-        } else if (action.includes('استشارة')) {
-            alert('📹 جاري فتح نافذة الفيديو...');
-        } else if (action.includes('أدوية')) {
-            alert('💊 جاري فتح صفحة طلب الأدوية...');
-        } else if (action.includes('فحوصات')) {
-            alert('📤 جاري فتح نموذج تحميل الفحوصات...');
+        } else if (action.includes('Consult')) {
+            alert('📹 Opening video call window...');
+        } else if (action.includes('Medicine')) {
+            alert('💊 Opening medicine order page...');
+        } else if (action.includes('Tests')) {
+            alert('📤 Opening test upload form...');
         }
     });
 });

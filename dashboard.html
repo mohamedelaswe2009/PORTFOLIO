@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة التحكم - ميديكا</title>
+    <title>Dashboard - Medica</title>
     <link rel="stylesheet" href="dashboard-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,7 +11,7 @@
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-header">
-            <h2>ميديكا 💚</h2>
+            <h2>Medica 💚</h2>
             <button class="menu-toggle-btn" onclick="toggleSidebar()">
                 <i class="fas fa-times"></i>
             </button>
@@ -19,29 +19,29 @@
 
         <nav class="sidebar-nav">
             <a href="#" class="nav-item active" data-tab="overview">
-                <i class="fas fa-home"></i> الرئيسية
+                <i class="fas fa-home"></i> Home
             </a>
             <a href="#" class="nav-item" data-tab="appointments">
-                <i class="fas fa-calendar"></i> المواعيد
+                <i class="fas fa-calendar"></i> Appointments
             </a>
             <a href="#" class="nav-item" data-tab="doctors">
-                <i class="fas fa-user-md"></i> الدكاترة
+                <i class="fas fa-user-md"></i> Doctors
             </a>
             <a href="#" class="nav-item" data-tab="records">
-                <i class="fas fa-file-medical"></i> السجلات الطبية
+                <i class="fas fa-file-medical"></i> Medical Records
             </a>
             <a href="#" class="nav-item" data-tab="messages">
-                <i class="fas fa-envelope"></i> الرسائل
+                <i class="fas fa-envelope"></i> Messages
                 <span class="badge">3</span>
             </a>
             <a href="#" class="nav-item" data-tab="settings">
-                <i class="fas fa-cog"></i> الإعدادات
+                <i class="fas fa-cog"></i> Settings
             </a>
         </nav>
 
         <div class="sidebar-footer">
             <button class="logout-btn" onclick="logout()">
-                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                <i class="fas fa-sign-out-alt"></i> Logout
             </button>
         </div>
     </aside>
@@ -54,7 +54,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="header-title">
-                <h1>مرحباً بك يا أحمد 👋</h1>
+                <h1>Welcome back, Ahmed 👋</h1>
             </div>
             <div class="header-actions">
                 <button class="notification-btn">
@@ -63,7 +63,7 @@
                 </button>
                 <div class="user-profile">
                     <img src="https://via.placeholder.com/40" alt="Profile">
-                    <span>أحمد محمد</span>
+                    <span>Ahmed Mohamed</span>
                 </div>
             </div>
         </header>
@@ -81,7 +81,7 @@
                             </div>
                             <div class="stat-info">
                                 <h3>3</h3>
-                                <p>مواعيد قادمة</p>
+                                <p>Upcoming Appointments</p>
                             </div>
                         </div>
                         <div class="stat-card">
@@ -90,7 +90,7 @@
                             </div>
                             <div class="stat-info">
                                 <h3>12</h3>
-                                <p>مواعيد مكتملة</p>
+                                <p>Completed Appointments</p>
                             </div>
                         </div>
                         <div class="stat-card">
@@ -99,7 +99,7 @@
                             </div>
                             <div class="stat-info">
                                 <h3>5</h3>
-                                <p>دكاترة متابعين</p>
+                                <p>Followed Doctors</p>
                             </div>
                         </div>
                         <div class="stat-card">
@@ -107,39 +107,39 @@
                                 <i class="fas fa-heart"></i>
                             </div>
                             <div class="stat-info">
-                                <h3>جيد</h3>
-                                <p>الحالة الصحية</p>
+                                <h3>Good</h3>
+                                <p>Health Status</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Next Appointment -->
                     <div class="upcoming-section">
-                        <h2>الموعد القادم 📅</h2>
+                        <h2>Next Appointment 📅</h2>
                         <div class="appointment-card featured">
                             <div class="appointment-date">
                                 <div class="date-box">
                                     <span class="day">25</span>
-                                    <span class="month">مايو</span>
+                                    <span class="month">May</span>
                                 </div>
                             </div>
                             <div class="appointment-details">
                                 <div class="doctor-info">
                                     <img src="https://via.placeholder.com/60" alt="Doctor">
                                     <div>
-                                        <h3>د. محمود علي</h3>
-                                        <p>أخصائي القلب 🫀</p>
+                                        <h3>Dr. Mahmoud Ali</h3>
+                                        <p>Cardiology Specialist 🫀</p>
                                     </div>
                                 </div>
                                 <div class="appointment-time">
                                     <i class="fas fa-clock"></i> 03:00 PM
                                 </div>
                                 <div class="appointment-location">
-                                    <i class="fas fa-map-marker-alt"></i> منزل المريض
+                                    <i class="fas fa-map-marker-alt"></i> Patient Home
                                 </div>
                                 <div class="appointment-actions">
-                                    <button class="btn-secondary">إعادة جدولة</button>
-                                    <button class="btn-danger">إلغاء</button>
+                                    <button class="btn-secondary">Reschedule</button>
+                                    <button class="btn-danger">Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -147,52 +147,52 @@
 
                     <!-- Recent Messages -->
                     <div class="recent-section">
-                        <h2>الرسائل الحديثة 💬</h2>
+                        <h2>Recent Messages 💬</h2>
                         <div class="message-list">
                             <div class="message-item">
                                 <img src="https://via.placeholder.com/40" alt="Doctor">
                                 <div class="message-content">
-                                    <h4>د. محمود علي</h4>
-                                    <p>شكراً على الالتزام بالأدوية...</p>
-                                    <span class="time">قبل ساعة</span>
+                                    <h4>Dr. Mahmoud Ali</h4>
+                                    <p>Thanks for sticking to the medication...</p>
+                                    <span class="time">1 hr ago</span>
                                 </div>
                             </div>
                             <div class="message-item">
                                 <img src="https://via.placeholder.com/40" alt="Doctor">
                                 <div class="message-content">
-                                    <h4>د. فاطمة أحمد</h4>
-                                    <p>موعدك غداً في تمام الساعة...</p>
-                                    <span class="time">قبل ساعتين</span>
+                                    <h4>Dr. Fatima Ahmed</h4>
+                                    <p>Your appointment is tomorrow at...</p>
+                                    <span class="time">2 hrs ago</span>
                                 </div>
                             </div>
                             <div class="message-item">
                                 <img src="https://via.placeholder.com/40" alt="System">
                                 <div class="message-content">
-                                    <h4>نظام ميديكا</h4>
-                                    <p>تذكير: لديك موعد بعد غد...</p>
-                                    <span class="time">قبل يومين</span>
+                                    <h4>Medica System</h4>
+                                    <p>Reminder: you have an appointment in two days...</p>
+                                    <span class="time">2 days ago</span>
                                 </div>
                             </div>
                         </div>
                         <button class="btn-primary" style="width: 100%; margin-top: 1rem;">
-                            عرض جميع الرسائل
+                            View All Messages
                         </button>
                     </div>
 
                     <!-- Quick Actions -->
                     <div class="quick-actions">
-                        <h2>إجراءات سريعة ⚡</h2>
+                        <h2>Quick Actions ⚡</h2>
                         <button class="action-btn" onclick="window.location.href='booking.html'">
-                            <i class="fas fa-plus-circle"></i> حجز موعد جديد
+                            <i class="fas fa-plus-circle"></i> Book New Appointment
                         </button>
                         <button class="action-btn">
-                            <i class="fas fa-video"></i> استشارة فيديو
+                            <i class="fas fa-video"></i> Video Consultation
                         </button>
                         <button class="action-btn">
-                            <i class="fas fa-prescription-bottle"></i> طلب أدوية
+                            <i class="fas fa-prescription-bottle"></i> Order Medicines
                         </button>
                         <button class="action-btn">
-                            <i class="fas fa-file-alt"></i> تحميل فحوصات
+                            <i class="fas fa-file-alt"></i> Upload Test Results
                         </button>
                     </div>
                 </div>
@@ -200,42 +200,42 @@
 
             <!-- Appointments Tab -->
             <section class="tab-content" id="appointments-tab">
-                <h2>المواعيد الخاصة بك 📅</h2>
+                <h2>Your Appointments 📅</h2>
                 <div class="filter-buttons">
-                    <button class="filter-btn active">الكل</button>
-                    <button class="filter-btn">قادم</button>
-                    <button class="filter-btn">مكتمل</button>
-                    <button class="filter-btn">ملغى</button>
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Upcoming</button>
+                    <button class="filter-btn">Completed</button>
+                    <button class="filter-btn">Canceled</button>
                 </div>
                 <div class="appointments-list">
                     <div class="appointment-card">
                         <div class="appointment-date">
-                            <span class="status-badge upcoming">قادم</span>
+                            <span class="status-badge upcoming">Upcoming</span>
                         </div>
                         <div class="appointment-details">
-                            <h3>د. محمود علي - أخصائي القلب</h3>
-                            <p><i class="fas fa-calendar"></i> 25 مايو 2026</p>
+                            <h3>Dr. Mahmoud Ali - Cardiology Specialist</h3>
+                            <p><i class="fas fa-calendar"></i> May 25, 2026</p>
                             <p><i class="fas fa-clock"></i> 03:00 PM</p>
-                            <p><i class="fas fa-map-marker-alt"></i> منزل المريض</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Patient Home</p>
                             <div class="appointment-actions">
-                                <button class="btn-secondary">تفاصيل</button>
-                                <button class="btn-secondary">إعادة جدولة</button>
+                                <button class="btn-secondary">Details</button>
+                                <button class="btn-secondary">Reschedule</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="appointment-card">
                         <div class="appointment-date">
-                            <span class="status-badge completed">مكتمل</span>
+                            <span class="status-badge completed">Completed</span>
                         </div>
                         <div class="appointment-details">
-                            <h3>د. فاطمة أحمد - أخصائية الجلدية</h3>
-                            <p><i class="fas fa-calendar"></i> 20 مايو 2026</p>
+                            <h3>Dr. Fatima Ahmed - Dermatology Specialist</h3>
+                            <p><i class="fas fa-calendar"></i> May 20, 2026</p>
                             <p><i class="fas fa-clock"></i> 10:00 AM</p>
-                            <p><i class="fas fa-video"></i> استشارة أونلاين</p>
+                            <p><i class="fas fa-video"></i> Online Consultation</p>
                             <div class="appointment-actions">
-                                <button class="btn-secondary">إعادة</button>
-                                <button class="btn-secondary">التقرير الطبي</button>
+                                <button class="btn-secondary">Review</button>
+                                <button class="btn-secondary">Medical Report</button>
                             </div>
                         </div>
                     </div>
@@ -244,61 +244,61 @@
 
             <!-- Doctors Tab -->
             <section class="tab-content" id="doctors-tab">
-                <h2>الدكاترة المتابعين 👨‍⚕️</h2>
+                <h2>Followed Doctors 👨‍⚕️</h2>
                 <div class="doctors-grid">
                     <div class="doctor-card">
                         <img src="https://via.placeholder.com/100" alt="Doctor">
-                        <h3>د. محمود علي</h3>
-                        <p>أخصائي القلب 🫀</p>
+                        <h3>Dr. Mahmoud Ali</h3>
+                        <p>Cardiology Specialist 🫀</p>
                         <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(4.8)</span>
                         </div>
-                        <p class="experience">خبرة: 15 سنة</p>
-                        <button class="btn-primary">الاتصال</button>
+                        <p class="experience">Experience: 15 yrs</p>
+                        <button class="btn-primary">Contact</button>
                     </div>
 
                     <div class="doctor-card">
                         <img src="https://via.placeholder.com/100" alt="Doctor">
-                        <h3>د. فاطمة أحمد</h3>
-                        <p>أخصائية الجلدية 💆</p>
+                        <h3>Dr. Fatima Ahmed</h3>
+                        <p>Dermatology Specialist 💆</p>
                         <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(4.6)</span>
                         </div>
-                        <p class="experience">خبرة: 12 سنة</p>
-                        <button class="btn-primary">الاتصال</button>
+                        <p class="experience">Experience: 12 yrs</p>
+                        <button class="btn-primary">Contact</button>
                     </div>
 
                     <div class="doctor-card">
                         <img src="https://via.placeholder.com/100" alt="Doctor">
-                        <h3>د. علي محمد</h3>
-                        <p>طبيب عام 🏥</p>
+                        <h3>Dr. Ali Mohamed</h3>
+                        <p>General Medicine 🏥</p>
                         <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(4.9)</span>
                         </div>
-                        <p class="experience">خبرة: 20 سنة</p>
-                        <button class="btn-primary">الاتصال</button>
+                        <p class="experience">Experience: 20 yrs</p>
+                        <button class="btn-primary">Contact</button>
                     </div>
                 </div>
             </section>
 
             <!-- Records Tab -->
             <section class="tab-content" id="records-tab">
-                <h2>السجلات الطبية 📋</h2>
+                <h2>Medical Records 📋</h2>
                 <div class="records-list">
                     <div class="record-item">
                         <div class="record-icon">
                             <i class="fas fa-heartbeat"></i>
                         </div>
                         <div class="record-content">
-                            <h3>فحص القلب</h3>
-                            <p>تاريخ: 20 مايو 2026</p>
-                            <p>الدكتور: د. محمود علي</p>
-                            <p>النتيجة: سليم ✅</p>
+                            <h3>Heart Check</h3>
+                            <p>Date: May 20, 2026</p>
+                            <p>Doctor: Dr. Mahmoud Ali</p>
+                            <p>Result: Healthy ✅</p>
                         </div>
-                        <button class="btn-secondary">تحميل</button>
+                        <button class="btn-secondary">Download</button>
                     </div>
 
                     <div class="record-item">
@@ -306,12 +306,12 @@
                             <i class="fas fa-prescription-bottle"></i>
                         </div>
                         <div class="record-content">
-                            <h3>وصفة دوائية</h3>
-                            <p>تاريخ: 15 مايو 2026</p>
-                            <p>الدكتور: د. فاطمة أحمد</p>
-                            <p>الأدوية: 3 أدوية موصوفة</p>
+                            <h3>Prescription</h3>
+                            <p>Date: May 15, 2026</p>
+                            <p>Doctor: Dr. Fatima Ahmed</p>
+                            <p>Medications: 3 prescribed drugs</p>
                         </div>
-                        <button class="btn-secondary">عرض</button>
+                        <button class="btn-secondary">View</button>
                     </div>
 
                     <div class="record-item">
@@ -319,82 +319,82 @@
                             <i class="fas fa-vial"></i>
                         </div>
                         <div class="record-content">
-                            <h3>تحاليل الدم</h3>
-                            <p>تاريخ: 10 مايو 2026</p>
-                            <p>الهيموجلوبين: 14.5</p>
-                            <p>الضغط: عادي ✅</p>
+                            <h3>Blood Tests</h3>
+                            <p>Date: May 10, 2026</p>
+                            <p>Hemoglobin: 14.5</p>
+                            <p>Blood Pressure: Normal ✅</p>
                         </div>
-                        <button class="btn-secondary">تحميل</button>
+                        <button class="btn-secondary">Download</button>
                     </div>
                 </div>
             </section>
 
             <!-- Messages Tab -->
             <section class="tab-content" id="messages-tab">
-                <h2>الرسائل 💬</h2>
+                <h2>Messages 💬</h2>
                 <div class="chat-container">
                     <div class="chat-message from-doctor">
-                        <p>أهلاً أحمد، كيف حالتك اليوم؟</p>
+                        <p>Hi Ahmed, how are you feeling today?</p>
                         <span class="time">10:00 AM</span>
                     </div>
                     <div class="chat-message from-patient">
-                        <p>أنا بخير الحمد لله دكتور، شكراً على السؤال</p>
+                        <p>I am fine, thank you doctor for asking.</p>
                         <span class="time">10:05 AM</span>
                     </div>
                     <div class="chat-message from-doctor">
-                        <p>هل تأخذ الأدوية بانتظام؟</p>
+                        <p>Are you taking your medications regularly?</p>
                         <span class="time">10:08 AM</span>
                     </div>
                 </div>
                 <div class="message-input">
-                    <input type="text" placeholder="اكتب رسالتك...">
+                    <input type="text" placeholder="Type your message...">
                     <button><i class="fas fa-paper-plane"></i></button>
                 </div>
             </section>
 
             <!-- Settings Tab -->
             <section class="tab-content" id="settings-tab">
-                <h2>الإعدادات ⚙️</h2>
+                <h2>Settings ⚙️</h2>
                 <div class="settings-container">
                     <div class="settings-group">
-                        <h3>البيانات الشخصية</h3>
+                        <h3>Personal Information</h3>
                         <div class="setting-item">
-                            <label>الاسم الكامل</label>
-                            <input type="text" value="أحمد محمد علي">
+                            <label>Full Name</label>
+                            <input type="text" value="Ahmed Mohamed Ali">
                         </div>
                         <div class="setting-item">
-                            <label>البريد الإلكتروني</label>
+                            <label>Email</label>
                             <input type="email" value="ahmed@example.com">
                         </div>
                         <div class="setting-item">
-                            <label>رقم الهاتف</label>
+                            <label>Phone Number</label>
                             <input type="tel" value="+20 100 123 4567">
                         </div>
                     </div>
 
                     <div class="settings-group">
-                        <h3>الإشعارات</h3>
+                        <h3>Notifications</h3>
                         <div class="setting-toggle">
-                            <label>إشعارات المواعيد</label>
+                            <label>Appointment Notifications</label>
                             <input type="checkbox" checked>
                         </div>
                         <div class="setting-toggle">
-                            <label>إشعارات الرسائل</label>
+                            <label>Message Notifications</label>
                             <input type="checkbox" checked>
                         </div>
                         <div class="setting-toggle">
-                            <label>إشعارات العروض</label>
+                            <label>Promotional Notifications</label>
                             <input type="checkbox">
                         </div>
                     </div>
 
                     <div class="settings-group">
-                        <h3>الخصوصية والأمان</h3>
-                        <button class="btn-secondary">تغيير كلمة المرور</button>
-                        <button class="btn-secondary">التحقق الثنائي</button>
+                        <h3>Privacy & Security</h3>
+                        <button class="btn-secondary">Change Password</button>
+                        <button class="btn-secondary">Two-Factor Authentication</button>
                     </div>
 
-                    <button class="btn-primary">حفظ التغييرات</button>
+                    <button class="btn-primary">Save Changes</button>
                 </div>
             </section>
         </div>

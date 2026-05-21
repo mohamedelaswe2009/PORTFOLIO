@@ -30,11 +30,8 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(contactForm);
-        
         // Show success message
-        alert('شكراً لتواصلك معنا! سنرد عليك قريباً ✉️');
+        alert('Thanks for reaching out! We will reply shortly ✉️');
         
         // Reset form
         contactForm.reset();
@@ -96,5 +93,5 @@ window.addEventListener('load', () => {
 // Add page load animation
 document.body.style.opacity = '0.95';
 
-console.log('✅ ميديكا - منصة طبية متقدمة');
-console.log('🚀 شكراً لزيارتك!');
+console.log('✅ Medica - Advanced healthcare platform');
+console.log('🚀 Thanks for visiting!');

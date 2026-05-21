@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حجز موعد - ميديكا</title>
+    <title>Book Appointment - Medica</title>
     <link rel="stylesheet" href="booking-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,85 +12,85 @@
         <!-- Header -->
         <header class="booking-header">
             <a href="dashboard.html" class="back-link">
-                <i class="fas fa-arrow-right"></i> رجوع للرئيسية
+                <i class="fas fa-arrow-right"></i> Back to Dashboard
             </a>
-            <h1>حجز موعد جديد 📅</h1>
+            <h1>Book a New Appointment 📅</h1>
         </header>
 
         <!-- Booking Steps -->
         <div class="booking-steps">
             <div class="step-item active">
                 <div class="step-number">1</div>
-                <span>اختر الخدمة</span>
+                <span>Choose Service</span>
             </div>
             <div class="step-divider"></div>
             <div class="step-item">
                 <div class="step-number">2</div>
-                <span>اختر الدكتور</span>
+                <span>Choose Doctor</span>
             </div>
             <div class="step-divider"></div>
             <div class="step-item">
                 <div class="step-number">3</div>
-                <span>اختر التاريخ والوقت</span>
+                <span>Choose Date & Time</span>
             </div>
             <div class="step-divider"></div>
             <div class="step-item">
                 <div class="step-number">4</div>
-                <span>تأكيد الحجز</span>
+                <span>Confirm Booking</span>
             </div>
         </div>
 
         <div class="booking-content">
             <!-- Step 1: Service Selection -->
             <section class="step-section active" id="step-1">
-                <h2>اختر نوع الخدمة 🏥</h2>
+                <h2>Choose a Service 🏥</h2>
                 <div class="service-grid">
                     <div class="service-card" data-service="home">
                         <i class="fas fa-home"></i>
-                        <h3>زيارة منزلية</h3>
-                        <p>يأتي الدكتور لمنزلك</p>
-                        <span class="price">50 ج.م</span>
+                        <h3>Home Visit</h3>
+                        <p>Doctor comes to your home</p>
+                        <span class="price">50 EGP</span>
                     </div>
 
                     <div class="service-card" data-service="clinic">
                         <i class="fas fa-hospital-user"></i>
-                        <h3>عيادة الدكتور</h3>
-                        <p>تذهب لعيادة الدكتور</p>
-                        <span class="price">30 ج.م</span>
+                        <h3>Doctor Clinic</h3>
+                        <p>Visit the doctor&#39;s clinic</p>
+                        <span class="price">30 EGP</span>
                     </div>
 
                     <div class="service-card" data-service="online">
                         <i class="fas fa-video"></i>
-                        <h3>استشارة أونلاين</h3>
-                        <p>استشارة عبر الفيديو</p>
-                        <span class="price">20 ج.م</span>
+                        <h3>Online Consultation</h3>
+                        <p>Video consultation</p>
+                        <span class="price">20 EGP</span>
                     </div>
 
                     <div class="service-card" data-service="phone">
                         <i class="fas fa-phone"></i>
-                        <h3>استشارة هاتفية</h3>
-                        <p>استشارة عبر الهاتف</p>
-                        <span class="price">15 ج.م</span>
+                        <h3>Phone Consultation</h3>
+                        <p>Consultation by phone</p>
+                        <span class="price">15 EGP</span>
                     </div>
                 </div>
-                <button class="btn-next" onclick="nextStep(1)">التالي</button>
+                <button class="btn-next" onclick="nextStep(1)">Next</button>
             </section>
 
             <!-- Step 2: Doctor Selection -->
             <section class="step-section" id="step-2">
-                <h2>اختر الدكتور 👨‍⚕️</h2>
+                <h2>Choose Doctor 👨‍⚕️</h2>
                 
                 <div class="filter-section">
-                    <label for="specialty">التخصص:</label>
+                    <label for="specialty">Specialty:</label>
                     <select id="specialty">
-                        <option value="">جميع التخصصات</option>
-                        <option value="cardiology">أمراض القلب</option>
-                        <option value="dermatology">الجلدية</option>
-                        <option value="pediatrics">طب الأطفال</option>
-                        <option value="general">الطب العام</option>
+                        <option value="">All Specialties</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="general">General Medicine</option>
                     </select>
 
-                    <label for="price-range">نطاق السعر:</label>
+                    <label for="price-range">Price Range:</label>
                     <input type="range" id="price-range" min="0" max="200" value="200">
                 </div>
 
@@ -100,8 +100,8 @@
                             <img src="https://via.placeholder.com/80" alt="Doctor">
                         </div>
                         <div class="doctor-info">
-                            <h3>د. محمود علي</h3>
-                            <p>أخصائي القلب</p>
+                            <h3>Dr. Mahmoud Ali</h3>
+                            <p>Cardiology Specialist</p>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -110,9 +110,9 @@
                                 <i class="fas fa-star"></i>
                                 <span>(4.8)</span>
                             </div>
-                            <p class="experience">خبرة: 15 سنة</p>
+                            <p class="experience">Experience: 15 yrs</p>
                         </div>
-                        <div class="doctor-price">50 ج.م</div>
+                        <div class="doctor-price">50 EGP</div>
                     </div>
 
                     <div class="doctor-option" data-doctor="2">
@@ -120,8 +120,8 @@
                             <img src="https://via.placeholder.com/80" alt="Doctor">
                         </div>
                         <div class="doctor-info">
-                            <h3>د. فاطمة أحمد</h3>
-                            <p>أخصائية الجلدية</p>
+                            <h3>Dr. Fatima Ahmed</h3>
+                            <p>Dermatology Specialist</p>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -130,9 +130,9 @@
                                 <i class="fas fa-star-half-alt"></i>
                                 <span>(4.6)</span>
                             </div>
-                            <p class="experience">خبرة: 12 سنة</p>
+                            <p class="experience">Experience: 12 yrs</p>
                         </div>
-                        <div class="doctor-price">40 ج.م</div>
+                        <div class="doctor-price">40 EGP</div>
                     </div>
 
                     <div class="doctor-option" data-doctor="3">
@@ -140,8 +140,8 @@
                             <img src="https://via.placeholder.com/80" alt="Doctor">
                         </div>
                         <div class="doctor-info">
-                            <h3>د. علي محمد</h3>
-                            <p>طبيب عام</p>
+                            <h3>Dr. Ali Mohamed</h3>
+                            <p>General Medicine Doctor</p>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -150,35 +150,35 @@
                                 <i class="fas fa-star"></i>
                                 <span>(4.9)</span>
                             </div>
-                            <p class="experience">خبرة: 20 سنة</p>
+                            <p class="experience">Experience: 20 yrs</p>
                         </div>
-                        <div class="doctor-price">45 ج.م</div>
+                        <div class="doctor-price">45 EGP</div>
                     </div>
                 </div>
                 <div class="step-buttons">
-                    <button class="btn-prev" onclick="prevStep(2)">السابق</button>
-                    <button class="btn-next" onclick="nextStep(2)">التالي</button>
+                    <button class="btn-prev" onclick="prevStep(2)">Previous</button>
+                    <button class="btn-next" onclick="nextStep(2)">Next</button>
                 </div>
             </section>
 
             <!-- Step 3: Date and Time Selection -->
             <section class="step-section" id="step-3">
-                <h2>اختر التاريخ والوقت ⏰</h2>
+                <h2>Choose Date & Time ⏰</h2>
 
                 <div class="datetime-selection">
                     <div class="date-picker">
-                        <h3>تاريخ الموعد</h3>
+                        <h3>Appointment Date</h3>
                         <input type="date" id="appointment-date">
                         <div class="available-dates">
-                            <button class="date-btn" data-date="2026-05-25">25 مايو</button>
-                            <button class="date-btn" data-date="2026-05-26">26 مايو</button>
-                            <button class="date-btn" data-date="2026-05-27">27 مايو</button>
-                            <button class="date-btn" data-date="2026-05-28">28 مايو</button>
+                            <button class="date-btn" data-date="2026-05-25">May 25</button>
+                            <button class="date-btn" data-date="2026-05-26">May 26</button>
+                            <button class="date-btn" data-date="2026-05-27">May 27</button>
+                            <button class="date-btn" data-date="2026-05-28">May 28</button>
                         </div>
                     </div>
 
                     <div class="time-picker">
-                        <h3>الوقت المفضل</h3>
+                        <h3>Preferred Time</h3>
                         <div class="available-times">
                             <button class="time-btn" data-time="08:00">08:00 AM</button>
                             <button class="time-btn" data-time="09:00">09:00 AM</button>
@@ -193,61 +193,61 @@
                 </div>
 
                 <div class="additional-info">
-                    <h3>معلومات إضافية</h3>
-                    <textarea id="appointment-notes" placeholder="أخبر الدكتور عن أعراضك أو حالتك (اختياري)"></textarea>
+                    <h3>Additional Information</h3>
+                    <textarea id="appointment-notes" placeholder="Tell the doctor about your symptoms or condition (optional)"></textarea>
                 </div>
 
                 <div class="step-buttons">
-                    <button class="btn-prev" onclick="prevStep(3)">السابق</button>
-                    <button class="btn-next" onclick="nextStep(3)">التالي</button>
+                    <button class="btn-prev" onclick="prevStep(3)">Previous</button>
+                    <button class="btn-next" onclick="nextStep(3)">Next</button>
                 </div>
             </section>
 
             <!-- Step 4: Confirmation -->
             <section class="step-section" id="step-4">
-                <h2>تأكيد الحجز ✅</h2>
+                <h2>Confirm Booking ✅</h2>
 
                 <div class="confirmation-summary">
                     <div class="summary-item">
-                        <h4>نوع الخدمة</h4>
+                        <h4>Service Type</h4>
                         <p id="summary-service">-</p>
                     </div>
                     <div class="summary-item">
-                        <h4>الدكتور</h4>
+                        <h4>Doctor</h4>
                         <p id="summary-doctor">-</p>
                     </div>
                     <div class="summary-item">
-                        <h4>التاريخ والوقت</h4>
+                        <h4>Date & Time</h4>
                         <p id="summary-datetime">-</p>
                     </div>
                     <div class="summary-item">
-                        <h4>السعر</h4>
+                        <h4>Price</h4>
                         <p id="summary-price">-</p>
                     </div>
                 </div>
 
                 <div class="payment-method">
-                    <h3>طريقة الدفع 💳</h3>
+                    <h3>Payment Method 💳</h3>
                     <label class="payment-option">
                         <input type="radio" name="payment" value="online" checked>
-                        <span>دفع أونلاين</span>
+                        <span>Online Payment</span>
                     </label>
                     <label class="payment-option">
                         <input type="radio" name="payment" value="cash">
-                        <span>دفع عند الخدمة</span>
+                        <span>Pay at Service</span>
                     </label>
                 </div>
 
                 <div class="terms-check">
                     <label>
                         <input type="checkbox" id="agree-terms" required>
-                        <span>أوافق على شروط الخدمة</span>
+                        <span>I agree to the Terms of Service</span>
                     </label>
                 </div>
 
                 <div class="step-buttons">
-                    <button class="btn-prev" onclick="prevStep(4)">السابق</button>
-                    <button class="btn-confirm" onclick="confirmBooking()">تأكيد الحجز</button>
+                    <button class="btn-prev" onclick="prevStep(4)">Previous</button>
+                    <button class="btn-confirm" onclick="confirmBooking()">Confirm Booking</button>
                 </div>
             </section>
         </div>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختر دكتورك - ميديكا</title>
+    <title>Find Your Doctor - Medica</title>
     <link rel="stylesheet" href="doctors-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,19 +12,19 @@
     <nav class="navbar">
         <div class="container navbar-container">
             <a href="index.html" class="logo">
-                <i class="fas fa-heartbeat"></i> ميديكا
+                <i class="fas fa-heartbeat"></i> Medica
             </a>
             <div class="nav-buttons">
-                <button class="btn-login" onclick="window.location.href='login.html'">دخول</button>
-                <button class="btn-signup" onclick="window.location.href='signup.html'">تسجيل</button>
+                <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-signup" onclick="window.location.href='signup.html'">Sign Up</button>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
     <header class="doctors-header">
-        <h1>اختر دكتورك المناسب 👨‍⚕️</h1>
-        <p>تصفح قائمتنا الواسعة من الدكاترة المتخصصين</p>
+        <h1>Find the Right Doctor for You 👨‍⚕️</h1>
+        <p>Browse our wide selection of trusted specialists</p>
     </header>
 
     <!-- Main Container -->
@@ -32,78 +32,78 @@
         <div class="doctors-page">
             <!-- Sidebar Filters -->
             <aside class="filter-sidebar">
-                <h3>البحث والتصفية 🔍</h3>
+                <h3>Search & Filter 🔍</h3>
 
                 <!-- Search -->
                 <div class="filter-group">
-                    <label>البحث بالاسم</label>
-                    <input type="text" id="search-input" placeholder="ابحث عن دكتور...">
+                    <label for="search-input">Search by name</label>
+                    <input type="text" id="search-input" placeholder="Search for a doctor...">
                 </div>
 
                 <!-- Specialty -->
                 <div class="filter-group">
-                    <label>التخصص</label>
+                    <label>Specialty</label>
                     <div class="checkbox-list">
                         <label class="checkbox-item">
-                            <input type="checkbox" value="cardiology"> أمراض القلب
+                            <input type="checkbox" value="cardiology"> Cardiology
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" value="dermatology"> الجلدية
+                            <input type="checkbox" value="dermatology"> Dermatology
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" value="pediatrics"> طب الأطفال
+                            <input type="checkbox" value="pediatrics"> Pediatrics
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" value="orthopedic"> العظام
+                            <input type="checkbox" value="orthopedic"> Orthopedics
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" value="general"> الطب العام
+                            <input type="checkbox" value="general"> General Medicine
                         </label>
                     </div>
                 </div>
 
                 <!-- Rating -->
                 <div class="filter-group">
-                    <label>التقييم الأدنى</label>
+                    <label>Minimum Rating</label>
                     <div class="rating-filter">
                         <label class="radio-item">
-                            <input type="radio" name="rating" value="0"> جميع التقييمات
+                            <input type="radio" name="rating" value="0" checked> All ratings
                         </label>
                         <label class="radio-item">
-                            <input type="radio" name="rating" value="3"> ⭐ 3 وما فوق
+                            <input type="radio" name="rating" value="3"> ⭐ 3 and above
                         </label>
                         <label class="radio-item">
-                            <input type="radio" name="rating" value="4"> ⭐ 4 وما فوق
+                            <input type="radio" name="rating" value="4"> ⭐ 4 and above
                         </label>
                         <label class="radio-item">
-                            <input type="radio" name="rating" value="4.5"> ⭐ 4.5 وما فوق
+                            <input type="radio" name="rating" value="4.5"> ⭐ 4.5 and above
                         </label>
                     </div>
                 </div>
 
                 <!-- Experience -->
                 <div class="filter-group">
-                    <label>سنوات الخبرة</label>
+                    <label for="experience-range">Experience Level</label>
                     <input type="range" id="experience-range" min="0" max="50" value="50">
-                    <span id="experience-value">جميع المستويات</span>
+                    <span id="experience-value">All levels</span>
                 </div>
 
                 <!-- Price Range -->
                 <div class="filter-group">
-                    <label>نطاق السعر</label>
+                    <label for="price-range">Price Range</label>
                     <input type="range" id="price-range" min="0" max="200" value="200">
-                    <span id="price-value">0 - 200 ج.م</span>
+                    <span id="price-value">$0 - $200</span>
                 </div>
 
                 <!-- Apply Filters -->
-                <button class="btn-apply-filters" onclick="applyFilters()">تطبيق الفلاتر</button>
-                <button class="btn-clear-filters" onclick="clearFilters()">مسح الفلاتر</button>
+                <button class="btn-apply-filters" onclick="applyFilters()">Apply Filters</button>
+                <button class="btn-clear-filters" onclick="clearFilters()">Clear Filters</button>
             </aside>
 
             <!-- Doctors Grid -->
             <main class="doctors-grid-container">
                 <div class="doctors-grid" id="doctors-grid">
-                    <!-- Doctor Cards will be inserted here -->
+                    <!-- Doctor cards will be inserted here -->
                 </div>
             </main>
         </div>
@@ -112,7 +112,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 ميديكا - جميع الحقوق محفوظة</p>
+            <p>&copy; 2026 Medica - All rights reserved</p>
         </div>
     </footer>
 

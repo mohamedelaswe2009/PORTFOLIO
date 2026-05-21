@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل - ميديكا</title>
+    <title>Sign Up - Medica</title>
     <link rel="stylesheet" href="auth-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,52 +12,52 @@
         <div class="auth-card">
             <div class="auth-header">
                 <a href="index.html" class="back-link">
-                    <i class="fas fa-arrow-right"></i> رجوع
+                    <i class="fas fa-arrow-right"></i> Back
                 </a>
-                <h1>ميديكا</h1>
+                <h1>Medica</h1>
                 <i class="fas fa-heartbeat"></i>
             </div>
 
             <form class="auth-form" id="signupForm">
-                <h2>إنشاء حساب جديد 🚀</h2>
-                <p>اختر نوع حسابك أولاً</p>
+                <h2>Create a New Account 🚀</h2>
+                <p>Choose your account type first</p>
 
                 <div class="role-selector">
                     <label class="role-option">
                         <input type="radio" name="role" value="patient" checked>
                         <span class="role-label">
-                            <i class="fas fa-user"></i> مريض
+                            <i class="fas fa-user"></i> Patient
                         </span>
                     </label>
                     <label class="role-option">
                         <input type="radio" name="role" value="doctor">
                         <span class="role-label">
-                            <i class="fas fa-user-md"></i> دكتور
+                            <i class="fas fa-user-md"></i> Doctor
                         </span>
                     </label>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="firstName">الاسم الأول</label>
+                        <label for="firstName">First Name</label>
                         <div class="input-wrapper">
                             <i class="fas fa-user"></i>
                             <input 
                                 type="text" 
                                 id="firstName" 
-                                placeholder="أحمد" 
+                                placeholder="John" 
                                 required
                             >
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="lastName">الاسم الأخير</label>
+                        <label for="lastName">Last Name</label>
                         <div class="input-wrapper">
                             <i class="fas fa-user"></i>
                             <input 
                                 type="text" 
                                 id="lastName" 
-                                placeholder="محمد" 
+                                placeholder="Doe" 
                                 required
                             >
                         </div>
@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="signupEmail">البريد الإلكتروني</label>
+                    <label for="signupEmail">Email</label>
                     <div class="input-wrapper">
                         <i class="fas fa-envelope"></i>
                         <input 
@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">رقم الهاتف</label>
+                    <label for="phone">Phone Number</label>
                     <div class="input-wrapper">
                         <i class="fas fa-phone"></i>
                         <input 
@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="signupPassword">كلمة المرور</label>
+                    <label for="signupPassword">Password</label>
                     <div class="input-wrapper">
                         <i class="fas fa-lock"></i>
                         <input 
@@ -104,11 +104,11 @@
                             <i class="fas fa-eye"></i>
                         </span>
                     </div>
-                    <small class="password-hint">كلمة المرور يجب أن تكون 8 أحرف على الأقل</small>
+                    <small class="password-hint">Password must be at least 8 characters</small>
                 </div>
 
                 <div class="form-group">
-                    <label for="confirmPassword">تأكيد كلمة المرور</label>
+                    <label for="confirmPassword">Confirm Password</label>
                     <div class="input-wrapper">
                         <i class="fas fa-lock"></i>
                         <input 
@@ -122,28 +122,28 @@
 
                 <label class="terms-checkbox">
                     <input type="checkbox" required>
-                    <span>أوافق على 
-                        <a href="#">شروط الخدمة</a> و
-                        <a href="#">سياسة الخصوصية</a>
+                    <span>I agree to 
+                        <a href="#">Terms of Service</a> and
+                        <a href="#">Privacy Policy</a>
                     </span>
                 </label>
 
-                <button type="submit" class="btn-login-submit">إنشاء الحساب</button>
+                <button type="submit" class="btn-login-submit">Create Account</button>
 
-                <div class="divider">أو</div>
+                <div class="divider">or</div>
 
                 <div class="social-login">
                     <button type="button" class="social-btn google">
-                        <i class="fab fa-google"></i> جوجل
+                        <i class="fab fa-google"></i> Google
                     </button>
                     <button type="button" class="social-btn facebook">
-                        <i class="fab fa-facebook"></i> فيس بوك
+                        <i class="fab fa-facebook"></i> Facebook
                     </button>
                 </div>
 
                 <div class="auth-footer">
-                    <p>هل لديك حساب بالفعل؟ 
-                        <a href="login.html">دخول</a>
+                    <p>Already have an account? 
+                        <a href="login.html">Login</a>
                     </p>
                 </div>
             </form>
@@ -151,15 +151,15 @@
             <div class="auth-features">
                 <div class="feature">
                     <i class="fas fa-check-circle"></i>
-                    <p>تسجيل آمن وموثوق</p>
+                    <p>Secure and trusted signup</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-shield-alt"></i>
-                    <p>حماية كاملة للبيانات</p>
+                    <p>Complete data protection</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-clock"></i>
-                    <p>لا يستغرق أكثر من دقيقة</p>
+                    <p>Takes less than a minute</p>
                 </div>
             </div>
         </div>
@@ -167,8 +167,8 @@
         <div class="auth-illustration">
             <div class="illustration-content">
                 <i class="fas fa-heart"></i>
-                <h3>صحتك أولويتنا 💚</h3>
-                <p>انضم لآلاف المستخدمين السعداء</p>
+                <h3>Your health is our priority 💚</h3>
+                <p>Join thousands of happy users</p>
             </div>
         </div>
     </div>

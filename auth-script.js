@@ -48,23 +48,23 @@ if (loginForm) {
         
         // Validation
         if (!validateEmail(email)) {
-            alert('❌ البريد الإلكتروني غير صحيح');
+            alert('❌ Invalid email address');
             return;
         }
         
         if (!password) {
-            alert('❌ يرجى إدخال كلمة المرور');
+            alert('❌ Please enter your password');
             return;
         }
         
         // Simulated login
-        console.log('تسجيل الدخول:', {
+        console.log('Login attempt:', {
             email: email,
             password: '••••••••'
         });
         
         // Show success message
-        alert('✅ تم تسجيل الدخول بنجاح!');
+        alert('✅ Login successful!');
         
         // Redirect to dashboard
         setTimeout(() => {
@@ -89,32 +89,32 @@ if (signupForm) {
         
         // Validation
         if (!firstName || !lastName) {
-            alert('❌ يرجى إدخال الاسم الأول والأخير');
+            alert('❌ Please enter your first and last name');
             return;
         }
         
         if (!validateEmail(email)) {
-            alert('❌ البريد الإلكتروني غير صحيح');
+            alert('❌ Invalid email address');
             return;
         }
         
         if (!phone) {
-            alert('❌ يرجى إدخال رقم الهاتف');
+            alert('❌ Please enter your phone number');
             return;
         }
         
         if (!validatePassword(password)) {
-            alert('❌ كلمة المرور يجب أن تكون 8 أحرف على الأقل');
+            alert('❌ Password must be at least 8 characters');
             return;
         }
         
         if (password !== confirmPassword) {
-            alert('❌ كلمات المرور غير متطابقة');
+            alert('❌ Passwords do not match');
             return;
         }
         
         // Simulated signup
-        console.log('تسجيل جديد:', {
+        console.log('Signup attempt:', {
             firstName: firstName,
             lastName: lastName,
             email: email,
@@ -124,7 +124,7 @@ if (signupForm) {
         });
         
         // Show success message
-        alert('✅ تم إنشاء الحساب بنجاح!');
+        alert('✅ Account created successfully!');
         
         // Redirect to dashboard
         setTimeout(() => {
@@ -140,7 +140,7 @@ const facebookBtn = document.querySelector('.social-btn.facebook');
 if (googleBtn) {
     googleBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        alert('🔐 جاري التوصل بـ Google...');
+        alert('🔐 Connecting with Google...');
         // In real app, this would trigger OAuth flow
     });
 }
@@ -148,7 +148,7 @@ if (googleBtn) {
 if (facebookBtn) {
     facebookBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        alert('🔐 جاري التوصل بـ Facebook...');
+        alert('🔐 Connecting with Facebook...');
         // In real app, this would trigger OAuth flow
     });
 }
@@ -158,11 +158,11 @@ const forgotPasswordLink = document.querySelector('.forgot-password');
 if (forgotPasswordLink) {
     forgotPasswordLink.addEventListener('click', (e) => {
         e.preventDefault();
-        const email = prompt('📧 أدخل بريدك الإلكتروني:');
+        const email = prompt('📧 Enter your email address:');
         if (email && validateEmail(email)) {
-            alert('✅ تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك');
+            alert('✅ Password reset link sent to your email');
         } else if (email) {
-            alert('❌ البريد الإلكتروني غير صحيح');
+            alert('❌ Invalid email address');
         }
     });
 }
@@ -176,13 +176,13 @@ if (signupPasswordField) {
         
         if (password.length < 8) {
             hint.style.color = '#ef4444';
-            hint.textContent = `⚠️ كلمة المرور ضعيفة (${password.length}/8)`;
+            hint.textContent = `⚠️ Weak password (${password.length}/8)`;
         } else if (password.length < 12) {
             hint.style.color = '#f59e0b';
-            hint.textContent = '⚠️ كلمة المرور متوسطة';
+            hint.textContent = '⚠️ Password strength is medium';
         } else {
             hint.style.color = '#10b981';
-            hint.textContent = '✅ كلمة المرور قوية';
+            hint.textContent = '✅ Password is strong';
         }
     });
 }

@@ -79,21 +79,19 @@ paymentOptions.forEach(option => {
 
 // Step Navigation
 function nextStep(currentStep) {
-    // Validation
     if (currentStep === 1 && !bookingData.service) {
-        alert('❌ يرجى اختيار نوع الخدمة');
+        alert('❌ Please select a service');
         return;
     }
     if (currentStep === 2 && !bookingData.doctor) {
-        alert('❌ يرجى اختيار دكتور');
+        alert('❌ Please select a doctor');
         return;
     }
     if (currentStep === 3 && (!bookingData.date || !bookingData.time)) {
-        alert('❌ يرجى اختيار التاريخ والوقت');
+        alert('❌ Please select the date and time');
         return;
     }
 
-    // Update steps
     updateSteps(currentStep + 1);
     showStep(currentStep + 1);
 }
@@ -121,32 +119,29 @@ function updateSteps(activeStep) {
     });
 }
 
-// Update Confirmation Summary
 function updateConfirmationSummary() {
     const services = {
-        'home': 'زيارة منزلية - 50 ج.م',
-        'clinic': 'عيادة الدكتور - 30 ج.م',
-        'online': 'استشارة أونلاين - 20 ج.م',
-        'phone': 'استشارة هاتفية - 15 ج.م'
+        'home': 'Home Visit - 50 EGP',
+        'clinic': 'Doctor Clinic - 30 EGP',
+        'online': 'Online Consultation - 20 EGP',
+        'phone': 'Phone Consultation - 15 EGP'
     };
 
     const doctors = {
-        '1': 'د. محمود علي - أخصائي القلب',
-        '2': 'د. فاطمة أحمد - أخصائية الجلدية',
-        '3': 'د. علي محمد - طبيب عام'
+        '1': 'Dr. Mahmoud Ali - Cardiology Specialist',
+        '2': 'Dr. Fatima Ahmed - Dermatology Specialist',
+        '3': 'Dr. Ali Mohamed - General Medicine'
     };
 
-    // Format time
-    const timeFormatted = bookingData.time ? 
-        new Date('2000-01-01 ' + bookingData.time).toLocaleString('ar-EG', { 
-            hour: '2-digit', 
+    const timeFormatted = bookingData.time ?
+        new Date('2000-01-01 ' + bookingData.time).toLocaleString('en-US', {
+            hour: '2-digit',
             minute: '2-digit',
-            hour12: true 
+            hour12: true
         }) : '-';
 
-    // Format date
-    const dateFormatted = bookingData.date ? 
-        new Date(bookingData.date + 'T00:00:00').toLocaleDateString('ar-EG', {
+    const dateFormatted = bookingData.date ?
+        new Date(bookingData.date + 'T00:00:00').toLocaleDateString('en-US', {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
@@ -156,8 +151,7 @@ function updateConfirmationSummary() {
     document.getElementById('summary-service').textContent = services[bookingData.service] || '-';
     document.getElementById('summary-doctor').textContent = doctors[bookingData.doctor] || '-';
     document.getElementById('summary-datetime').textContent = `${dateFormatted} - ${timeFormatted}`;
-    
-    // Calculate price
+
     const servicePrices = {
         'home': 50,
         'clinic': 30,
@@ -165,10 +159,9 @@ function updateConfirmationSummary() {
         'phone': 15
     };
     const price = servicePrices[bookingData.service] || 0;
-    document.getElementById('summary-price').textContent = `${price} ج.م`;
+    document.getElementById('summary-price').textContent = `${price} EGP`;
 }
 
-// Hook into step 4 to update summary
 const originalNextStep = nextStep;
 window.nextStep = function(currentStep) {
     if (currentStep === 3) {
@@ -177,39 +170,33 @@ window.nextStep = function(currentStep) {
     originalNextStep(currentStep);
 };
 
-// Confirm Booking
 function confirmBooking() {
     const agreeTerms = document.getElementById('agree-terms');
-    
-    if (!agreeTerms.checked) {
-        alert('❌ يرجى الموافقة على شروط الخدمة');
+
+    if (!agreeTerms || !agreeTerms.checked) {
+        alert('❌ Please agree to the terms of service');
         return;
     }
 
     console.log('Final Booking Data:', bookingData);
-    alert(`✅ تم تأكيد الحجز بنجاح!\n\nتفاصيل الموعد:\n- الدكتور: د. محمود علي\n- التاريخ: 25 مايو\n- الوقت: ${bookingData.time}\n- السعر: 50 ج.م\n\nسيتم إرسال تأكيد عبر البريد الإلكتروني`);
-    
-    // Redirect to dashboard
+    alert(`✅ Booking confirmed successfully!\n\nAppointment details:\n- Doctor: ${document.getElementById('summary-doctor').textContent}\n- Date: ${document.getElementById('summary-datetime').textContent}\n- Price: ${document.getElementById('summary-price').textContent}`);
+
     setTimeout(() => {
         window.location.href = 'dashboard.html';
     }, 2000);
 }
 
-// Specialty Filter
 const specialtyFilter = document.getElementById('specialty');
 if (specialtyFilter) {
     specialtyFilter.addEventListener('change', () => {
         console.log('Filter by specialty:', specialtyFilter.value);
-        // Here you would filter doctors
     });
 }
 
-// Price Range Filter
 const priceRange = document.getElementById('price-range');
 if (priceRange) {
     priceRange.addEventListener('input', () => {
         console.log('Max price:', priceRange.value);
-        // Here you would filter doctors by price
     });
 }
 
