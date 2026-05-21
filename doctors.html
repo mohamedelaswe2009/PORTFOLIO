@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختر دكتورك - ميديكا</title>
+    <link rel="stylesheet" href="doctors-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-heartbeat"></i> ميديكا
+            </a>
+            <div class="nav-buttons">
+                <button class="btn-login" onclick="window.location.href='login.html'">دخول</button>
+                <button class="btn-signup" onclick="window.location.href='signup.html'">تسجيل</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="doctors-header">
+        <h1>اختر دكتورك المناسب 👨‍⚕️</h1>
+        <p>تصفح قائمتنا الواسعة من الدكاترة المتخصصين</p>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="doctors-page">
+            <!-- Sidebar Filters -->
+            <aside class="filter-sidebar">
+                <h3>البحث والتصفية 🔍</h3>
+
+                <!-- Search -->
+                <div class="filter-group">
+                    <label>البحث بالاسم</label>
+                    <input type="text" id="search-input" placeholder="ابحث عن دكتور...">
+                </div>
+
+                <!-- Specialty -->
+                <div class="filter-group">
+                    <label>التخصص</label>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="cardiology"> أمراض القلب
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="dermatology"> الجلدية
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="pediatrics"> طب الأطفال
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="orthopedic"> العظام
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="general"> الطب العام
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Rating -->
+                <div class="filter-group">
+                    <label>التقييم الأدنى</label>
+                    <div class="rating-filter">
+                        <label class="radio-item">
+                            <input type="radio" name="rating" value="0"> جميع التقييمات
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="rating" value="3"> ⭐ 3 وما فوق
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="rating" value="4"> ⭐ 4 وما فوق
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="rating" value="4.5"> ⭐ 4.5 وما فوق
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="filter-group">
+                    <label>سنوات الخبرة</label>
+                    <input type="range" id="experience-range" min="0" max="50" value="50">
+                    <span id="experience-value">جميع المستويات</span>
+                </div>
+
+                <!-- Price Range -->
+                <div class="filter-group">
+                    <label>نطاق السعر</label>
+                    <input type="range" id="price-range" min="0" max="200" value="200">
+                    <span id="price-value">0 - 200 ج.م</span>
+                </div>
+
+                <!-- Apply Filters -->
+                <button class="btn-apply-filters" onclick="applyFilters()">تطبيق الفلاتر</button>
+                <button class="btn-clear-filters" onclick="clearFilters()">مسح الفلاتر</button>
+            </aside>
+
+            <!-- Doctors Grid -->
+            <main class="doctors-grid-container">
+                <div class="doctors-grid" id="doctors-grid">
+                    <!-- Doctor Cards will be inserted here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ميديكا - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="doctors-script.js"></script>
+</body>
+</html>

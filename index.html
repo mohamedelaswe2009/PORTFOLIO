@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ميديكا - منصة طبية متخصصة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i> ميديكا
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#features">الخدمات</a></li>
+                <li><a href="#doctors">الدكاترة</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login" onclick="window.location.href='login.html'">دخول</button>
+                <button class="btn-signup" onclick="window.location.href='signup.html'">تسجيل</button>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>مرحباً بك في <span class="accent">ميديكا</span></h1>
+            <p>منصة طبية حديثة تربط بينك وبين أفضل الدكاترة</p>
+            <p class="subtitle">احصل على استشارة طبية من منزلك في ثوانٍ معدودة ⏱️</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="window.location.href='signup.html'">ابدأ الآن</button>
+                <button class="btn-secondary" onclick="scrollToSection('features')">اعرف أكثر</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="doctor-illustration">
+                <i class="fas fa-user-md"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>ميزاتنا المتقدمة 🚀</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>زيارة منزلية</h3>
+                <p>احجز دكتور يأتي لمنزلك في الوقت المناسب لك</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>استشارة أونلاين</h3>
+                <p>تحدث مع الدكتور عبر الفيديو من راحة منزلك</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>حجز سهل</h3>
+                <p>اختر التاريخ والوقت المناسب لك بسهولة</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <h3>السجلات الطبية</h3>
+                <p>احفظ كل سجلاتك الطبية في مكان واحد آمن</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>تقييمات الدكاترة</h3>
+                <p>اختر دكتور بناءً على تقييمات المرضى الحقيقية</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>تنبيهات ذكية</h3>
+                <p>احصل على تذكيرات للمواعيد المهمة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors" id="doctors">
+        <h2>اختر تخصصك 👨‍⚕️</h2>
+        <div class="specialties-grid">
+            <div class="specialty-card" onclick="window.location.href='doctors.html?specialty=cardiology'">
+                <i class="fas fa-heart"></i>
+                <h3>أمراض القلب</h3>
+                <p>متخصصون في أمراض القلب والأوعية الدموية</p>
+            </div>
+
+            <div class="specialty-card" onclick="window.location.href='doctors.html?specialty=pediatrics'">
+                <i class="fas fa-child"></i>
+                <h3>طب الأطفال</h3>
+                <p>رعاية صحية متخصصة للأطفال</p>
+            </div>
+
+            <div class="specialty-card" onclick="window.location.href='doctors.html?specialty=dermatology'">
+                <i class="fas fa-spa"></i>
+                <h3>الجلدية</h3>
+                <p>معالجة جميع مشاكل الجلد والتجميل</p>
+            </div>
+
+            <div class="specialty-card" onclick="window.location.href='doctors.html?specialty=general'">
+                <i class="fas fa-stethoscope"></i>
+                <h3>الطب العام</h3>
+                <p>استشارات طبية عامة وتشخيصية</p>
+            </div>
+
+            <div class="specialty-card" onclick="window.location.href='doctors.html?specialty=orthopedic'">
+                <i class="fas fa-bone"></i>
+                <h3>العظام</h3>
+                <p>علاج أمراض العظام والمفاصل</p>
+            </div>
+
+            <div class="specialty-card" onclick="window.location.href='doctors.html?specialty=psychology'">
+                <i class="fas fa-brain"></i>
+                <h3>الطب النفسي</h3>
+                <p>استشارات نفسية واجتماعية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <h3>+5000</h3>
+                <p>مريض راضٍ</p>
+            </div>
+            <div class="stat-card">
+                <h3>+500</h3>
+                <p>دكتور متخصص</p>
+            </div>
+            <div class="stat-card">
+                <h3>+10000</h3>
+                <p>حجز ناجح</p>
+            </div>
+            <div class="stat-card">
+                <h3>4.8/5</h3>
+                <p>تقييم المنصة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>ابدأ رحلتك الصحية اليوم 💚</h2>
+        <p>انضم لآلاف المرضى الذين استفادوا من خدماتنا</p>
+        <button class="btn-large" onclick="window.location.href='signup.html'">سجل الآن مجاناً</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>تواصل معنا 📞</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <p>+20 100 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>support@medica.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>العنوان</h4>
+                            <p>القاهرة - مصر</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="اسمك" required>
+                    <input type="email" placeholder="بريدك الإلكتروني" required>
+                    <textarea placeholder="رسالتك..." required></textarea>
+                    <button type="submit" class="btn-primary">أرسل الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ميديكا</h4>
+                    <p>منصة طبية متقدمة لخدمة صحتك</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#features">الخدمات</a></li>
+                        <li><a href="login.html">دخول</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>متابعنا</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ميديكا - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
